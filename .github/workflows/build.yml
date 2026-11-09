@@ -20,11 +20,10 @@ jobs:
         pip3 install buildozer cython
 
     - name: Build APK with Buildozer
-      run: buildozer android debug
+      run: yes | buildozer android debug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: PixelGlitch-APK
         path: bin/*.apk
-        
